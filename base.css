@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap");
+textarea {
+  resize: none;
+  overflow: hidden;
+
+  height: 19px;
+  background-color: rgba(37, 59, 137, 0.11);
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.p1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 55px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.p2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.p3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+#content {
+  position: relative;
+}
+#content img {
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  height: 175px;
+  width: 175px;
+  z-index: 2;
+}
+
+#stempel img {
+  top: -30px;
+  right: 0px;
+  height: 100px;
+  width: 200px;
+  z-index: 2;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html,
+body {
+  height: 297mm;
+  width: 210mm;
+}
+
+html {
+  border-left: 20px solid #c3283500;
+
+  width: 75mm;
+  height: 22mm;
+  top: 20px;
+}
+
+.pics {
+  width: 100mm;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  cursor: pointer;
+}
+
+#wrapper {
+}

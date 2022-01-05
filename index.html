@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <title>Hafner Baubericht</title>
+  </head>
+  <body>
+    <div id="content">
+      <img src="logo.png" class="ribbon" />
+    </div>
+
+    <p class="p1">Baubericht</p>
+
+    <p class="p2">Protokoll</p>
+    <p class="p3">Bauvorhaben:</p>
+    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+    <br />
+    <br />
+    <div>
+      <p class="p3">Erstellungsdatum:</p>
+      <textarea
+        id="date"
+        oninput="auto_grow(this)"
+        style="width: 20%;"
+      ></textarea>
+    </div>
+    <p class="p3">Erstellungszeit:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="width: 20%;"
+    ></textarea>
+
+    <p class="p3">Anwesende Monteure:</p>
+    <textarea oninput="auto_grow(this)" style="width: 20%;"></textarea>
+
+    <p class="p3">Heute geleistete Arbeiten:</p>
+    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+
+    <p class="p3">Zusatzarbeiten ohne Berechnung:</p>
+    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+
+    <p class="p3">Regiearbeiten mit Berechnung:</p>
+    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+
+    <p class="p3">Relevante Telefonate:</p>
+    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+
+    <p class="p2">Gesprächsnotizen/Protokoll:</p>
+
+    <p class="p3">Datum:</p>
+    <textarea
+      id="date"
+      oninput="auto_grow(this)"
+      style="width: 20%;"
+    ></textarea>
+    <p class="p3">Zeit:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="width: 20%;"
+    ></textarea>
+    <p class="p3">Teilgenommene Personen:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+    ></textarea>
+    <p class="p3">Thema:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+    ></textarea>
+    <p class="p3">Betrifft:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+    ></textarea>
+    <p class="p3">Gesprächsprotokoll:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+    ></textarea>
+    <p class="p3">Gezeichnet:</p>
+    <textarea
+      id="time"
+      oninput="auto_grow(this)"
+      style="background-color: rgba(0, 55, 255, 0); border: none;"
+    ></textarea>
+
+    <label for="file-upload" class="custom-file-upload">
+      <div id="stempel" type="file">
+        <img src="stempel.jpg" class="ribbon" />
+      </div>
+    </label>
+
+    <input id="file-upload" type="file" />
+
+    <div id="wrapper" style="position: absolute; top: 650mm;">
+      <div class="p3 anhang" id="anhang"></div>
+      <div class="pictures"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="run.js"></script>
+  </body>
+</html>
