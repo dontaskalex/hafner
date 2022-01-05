@@ -13,14 +13,19 @@
   </head>
   <body>
     <div id="content">
-      <img src="logo.png" />
+      <img src="logo.png" onclick="removeValues()" />
     </div>
 
     <p class="p1">Baubericht</p>
 
     <p class="p2">Protokoll</p>
     <p class="p3">Bauvorhaben:</p>
-    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+    <textarea
+      id="bauvorhaben"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+      onkeyup="saveValue(this)"
+    ></textarea>
     <br />
     <br />
     <div>
@@ -39,61 +44,92 @@
     ></textarea>
 
     <p class="p3">Anwesende Monteure:</p>
-    <textarea oninput="auto_grow(this)" style="width: 20%;"></textarea>
+    <textarea
+      id="anwesendemonteure"
+      oninput="auto_grow(this)"
+      style="width: 20%;"
+      onkeyup="saveValue(this)"
+    ></textarea>
 
     <p class="p3">Heute geleistete Arbeiten:</p>
-    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+    <textarea
+      id="heutegeleistetearbeiten"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+      onkeyup="saveValue(this)"
+    ></textarea>
 
     <p class="p3">Zusatzarbeiten ohne Berechnung:</p>
-    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+    <textarea
+      id="zusatzarbeitenohneberechnung"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+      onkeyup="saveValue(this)"
+    ></textarea>
 
     <p class="p3">Regiearbeiten mit Berechnung:</p>
-    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+    <textarea
+      id="regiearbeitenmitberechnung"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+      onkeyup="saveValue(this)"
+    ></textarea>
 
     <p class="p3">Relevante Telefonate:</p>
-    <textarea oninput="auto_grow(this)" style="width: 80%;"></textarea>
+    <textarea
+      id="relevantetelefonate"
+      oninput="auto_grow(this)"
+      style="width: 80%;"
+      onkeyup="saveValue(this)"
+    ></textarea>
 
     <p class="p2">Gesprächsnotizen/Protokoll:</p>
 
     <p class="p3">Datum:</p>
     <textarea
-      id="date"
+      id="datum"
       oninput="auto_grow(this)"
       style="width: 20%;"
+      onkeyup="saveValue(this)"
     ></textarea>
     <p class="p3">Zeit:</p>
     <textarea
-      id="time"
+      id="zeit"
       oninput="auto_grow(this)"
       style="width: 20%;"
+      onkeyup="saveValue(this)"
     ></textarea>
     <p class="p3">Teilgenommene Personen:</p>
     <textarea
-      id="time"
+      id="teilgenommenepersonen"
       oninput="auto_grow(this)"
       style="width: 80%;"
+      onkeyup="saveValue(this)"
     ></textarea>
     <p class="p3">Thema:</p>
     <textarea
-      id="time"
+      id="thema"
       oninput="auto_grow(this)"
       style="width: 80%;"
+      onkeyup="saveValue(this)"
     ></textarea>
     <p class="p3">Betrifft:</p>
     <textarea
-      id="time"
+      id="betrifft"
       oninput="auto_grow(this)"
       style="width: 80%;"
+      onkeyup="saveValue(this)"
     ></textarea>
     <p class="p3">Gesprächsprotokoll:</p>
     <textarea
-      id="time"
+      id="gesprächsprotokoll"
       oninput="auto_grow(this)"
       style="width: 80%;"
+      onkeyup="saveValue(this);"
     ></textarea>
     <p class="p3">Gezeichnet:</p>
     <textarea
-      id="time"
+      id="gezeichnet"
       oninput="auto_grow(this)"
       style="background-color: rgba(0, 55, 255, 0); border: none; width: 80%;"
     ></textarea>
