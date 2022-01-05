@@ -60,3 +60,49 @@ function up() {
   var tmp2 = document.getElementById("down");
   tmp2.setAttribute("onClick", "javascript: down();");
 }
+
+var ids = [
+  "bauvorhaben",
+  "anwesendemonteure",
+  "heutegeleistetearbeiten",
+  "zusatzarbeitenohneberechnung",
+  "regiearbeitenmitberechnung",
+  "relevantetelefonate",
+  "datum",
+  "zeit",
+  "teilgenommenepersonen",
+  "thema",
+  "betrifft",
+  "gesprächsprotokoll",
+  "gezeichnet"
+];
+
+for (var i = 0; i < ids.length; i++) {
+  document.getElementById(ids[i]).value = getSavedValue(ids[i]);
+  document.getElementById(ids[i]).style.height = getSavedValue(
+    ids[i] + "height"
+  );
+}
+
+//Save the value function - save it to localStorage as (ID, VALUE)
+function saveValue(e) {
+  var id = e.id; // get the sender's id to save it .
+  var idheight = id + "height";
+  var val = e.value; // get the value.
+  var he = e.style.height;
+  localStorage.setItem(id, val); // Every time user writing something, the localStorage's value will override .
+  localStorage.setItem(idheight, he);
+}
+
+//get the saved value function - return the value of "v" from localStorage.
+function getSavedValue(v) {
+  if (!localStorage.getItem(v)) {
+    return ""; // You can change this to your defualt value.
+  }
+  return localStorage.getItem(v);
+}
+
+function removeValues() {
+  localStorage.clear();
+  window.location.reload();
+}
