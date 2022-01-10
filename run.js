@@ -90,19 +90,33 @@ function saveValue(e) {
   var idheight = id + "height";
   var val = e.value; // get the value.
   var he = e.style.height;
+  //document.getElementById("demo").innerHTML +=
+  //  "localstorage (" + id + ", " + val + "); ";
   localStorage.setItem(id, val); // Every time user writing something, the localStorage's value will override .
   localStorage.setItem(idheight, he);
+  //document.getElementById("demo").innerHTML +=
+  //  "localstorage (" + idheight + ", " + he + "); ";
 }
 
-//get the saved value function - return the value of "v" from localStorage.
 function getSavedValue(v) {
   if (!localStorage.getItem(v)) {
     return ""; // You can change this to your defualt value.
   }
   return localStorage.getItem(v);
 }
+//get the saved value function - return the value of "v" from localStorage.
 
 function removeValues() {
   localStorage.clear();
   window.location.reload();
 }
+
+function refresher() {
+  var tmp = document.getElementById("bauvorhaben");
+
+  saveValue(tmp);
+
+  //document.getElementById("demo").innerHTML += tmp.value;
+}
+
+setInterval(refresher, 500);
