@@ -112,9 +112,10 @@ function removeValues() {
 }
 
 function refresher() {
-  var tmp = document.getElementById("bauvorhaben");
-
-  saveValue(tmp);
+  for (var j = 0; j < ids.length; j++) {
+    var tmp = document.getElementById(ids[j]);
+    saveValue(tmp);
+  }
 
   //document.getElementById("demo").innerHTML += tmp.value;
 }
